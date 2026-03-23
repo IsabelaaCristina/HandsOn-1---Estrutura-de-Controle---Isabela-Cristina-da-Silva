@@ -1,0 +1,571 @@
+import java.util.Scanner;
+
+public class HandsOn {
+    
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        int opcao;
+
+        do {
+            System.out.println("\n===============================");
+            System.out.println("      MENU DE EXERCÍCIOS       ");
+            System.out.println("===============================");
+            System.out.println("0. Sair");
+            System.out.println("1. Exercício 1 ");
+            System.out.println("2. Exercício 2 ");
+            System.out.println("3. Exercício 3");
+            System.out.println("4. Exercício 4");
+            System.out.println("5. Exercício 5");
+            System.out.println("6. Exercício 6");
+            System.out.println("7. Exercício 7");
+            System.out.println("8. Exercício 8");
+            System.out.println("9. Exercício 9");
+            System.out.println("10. Exercício 10");
+            System.out.print("\nEscolha uma opção: ");
+            
+            opcao = leitor.nextInt();
+
+            switch (opcao) {
+                case 0:
+                    System.out.println("Saindo do programa... Até logo!");
+                    break;
+                
+                case 1:
+        
+                    System.out.println("\n[Executando Exercício 1]");
+                   
+
+                    Scanner sc = new Scanner(System.in); 
+
+                    int num; 
+
+       
+
+     
+                    System.out.println("Informe um número: "); 
+
+      
+                    num = sc.nextInt(); 
+
+       
+
+      
+                    if (num % 2 == 0) { 
+
+            
+                        System.out.println("O número " + num + " é PAR."); 
+
+        
+                    } else { 
+
+           
+                        System.out.println("O número " + num + " é ÍMPPAR."); 
+
+        
+                    } 
+
+       
+             break;
+
+                case 2:
+                  
+                    System.out.println("\n[Executando Exercício 2]");
+                    
+                    Scanner scan = new Scanner(System.in); 
+
+        
+                    int numero1 = scan.nextInt(); 
+
+        
+                    int numero2 = scan.nextInt(); 
+
+  
+
+        
+                    if (numero1>numero2) System.out.println(numero1 +" é maior"); 
+
+        
+                    else if (numero2>numero1) System.out.println(numero2 +" é maior"); 
+
+        
+                    else System.out.println("São iguais");
+                    break;
+
+                case 3:
+                 
+                    System.out.println("\n[Executando Exercício 3]");
+                           Scanner scan2 = new Scanner(System.in); 
+
+        
+                           System.out.println("--- CALCULADORA COM IF-ELSE ---"); 
+
+        
+                           System.out.println("1 - Somar"); 
+
+       
+                           System.out.println("2 - Subtrair"); 
+
+       
+                           System.out.println("3 - Multiplicar"); 
+
+        
+                           System.out.println("4 - Dividir"); 
+
+        
+                           System.out.print("Escolha uma opção: "); 
+
+
+                           int opcao1 = scan2.nextInt(); 
+       
+                           System.out.print("Digite o primeiro número: "); 
+
+       
+                           double num1 = scan2.nextDouble(); 
+
+
+       
+                           System.out.print("Digite o segundo número: "); 
+
+       
+                           double num2 = scan2.nextDouble(); 
+
+
+        
+                           if (opcao1 == 1) { 
+
+           
+                            System.out.println("Resultado da Soma: " + (num1 + num2)); 
+
+        
+                        }  
+
+        
+                        else if (opcao1 == 2) { 
+
+            
+                            System.out.println("Resultado da Subtração: " + (num1 - num2)); 
+
+       
+                        }  
+
+        
+                        else if (opcao1 == 3) { 
+
+            
+                            System.out.println("Resultado da Multiplicação: " + (num1 * num2)); 
+
+        
+                        }  
+
+        
+                        else if (opcao1 == 4) { 
+
+             
+
+            
+                            if (num2 == 0) { 
+
+               
+                                System.out.println("Erro: Não é possível dividir por zero!"); 
+
+            
+                            } else { 
+
+                
+                                System.out.println("Resultado da Divisão: " + (num1 / num2)); 
+
+           
+                            } 
+
+       
+                        }  
+
+       
+                        else {                           
+
+            
+                            System.out.println("Opção inválida! Escolha um número de 1 a 4."); 
+
+        
+                        } 
+                    break;
+
+                case 4:
+                    System.out.println("\n[Executando Exercício 4]");
+                    Scanner scan3 = new Scanner(System.in);
+        
+                    int nota;
+        
+                    System.out.print("Digite uma nota (entre 0 e 100): ");
+        
+                    nota = scan3.nextInt();
+
+        
+        
+                    while (nota < 0 || nota > 100) {
+            
+                        System.out.println("Nota inválida! A nota deve estar entre 0 e 100.");
+            
+                        System.out.print("Tente novamente: ");
+            
+                        nota = leitor.nextInt(); // Lê novamente para atualizar a variável
+        
+                    }
+
+        
+        
+                    System.out.println("Sucesso! Nota " + nota + " registrada.");
+
+        
+                    break;
+
+                case 5:
+                    System.out.println("\n[Executando Exercício 5]");
+                    Scanner scan4 = new Scanner(System.in);
+
+        
+                    int numero; 
+                    int maior = Integer.MIN_VALUE;  
+                    int menor = Integer.MAX_VALUE;  
+                    boolean primeiroNumero = true;  
+
+ 
+                    System.out.println("Digite números (ou 0 para sair):"); 
+
+ 
+                    while (true) { 
+
+                       numero = scan4.nextInt(); 
+
+ 
+                       if (numero == 0) { 
+
+                break;  
+
+            } 
+
+ 
+ 
+
+             
+
+            if (numero > maior) { 
+
+                maior = numero; 
+
+            } 
+
+            if (numero < menor) { 
+
+                menor = numero; 
+
+            } 
+
+             
+
+            primeiroNumero = false; 
+
+        } 
+         
+        if (primeiroNumero) { 
+
+            System.out.println("Nenhum número válido foi digitado."); 
+
+        } else { 
+
+            System.out.println("O maior número digitado foi: " + maior); 
+
+            System.out.println("O menor número digitado foi: " + menor); 
+
+        } 
+                    break;
+
+                case 6:
+                    System.out.println("\n[Executando Exercício 6]");
+                     Scanner scan5 = new Scanner(System.in); 
+
+         
+
+        
+                     double saldo = 1000.00; 
+
+        
+                     int opcao2 = 0; 
+
+ 
+                    System.out.println("--- BEM-VINDO AO CAIXA ELETRÔNICO ---"); 
+
+            while (opcao != 4) { 
+
+            System.out.println("\nSaldo atual: R$ " + saldo); 
+
+            System.out.println("1 - Depositar"); 
+
+            System.out.println("2 - Sacar"); 
+
+            System.out.println("3 - Ver saldo"); 
+
+            System.out.println("4 - Sair"); 
+
+            System.out.print("Escolha uma opção: "); 
+
+            opcao = scan5.nextInt(); 
+
+ 
+            if (opcao2 == 1) { 
+
+                System.out.print("Valor do depósito: "); 
+
+                double deposito = scan5.nextDouble(); 
+
+                 
+                if (deposito > 0) { 
+
+                    saldo += deposito; 
+
+                    System.out.println("Depósito realizado com sucesso!"); 
+
+                } else { 
+
+                    System.out.println("Erro: O valor deve ser maior que zero."); 
+
+                } 
+
+            } else if (opcao2 == 2) { 
+
+                System.out.print("Valor do saque: "); 
+
+                double saque = scan5.nextDouble(); 
+                
+
+                if (saque > 0 && saque <= saldo) { 
+
+                    saldo -= saque; 
+
+                    System.out.println("Saque realizado com sucesso!"); 
+
+                } else if (saque > saldo) { 
+
+                    System.out.println("Erro: Saldo insuficiente!"); 
+
+                } else { 
+
+                    System.out.println("Erro: Valor de saque inválido."); 
+
+                } 
+
+            } else if (opcao2 == 3) { 
+
+                System.out.println("Seu saldo disponível é: R$ " + saldo); 
+
+
+            } else if (opcao2 == 4) { 
+
+                System.out.println("Encerrando o sistema..."); 
+ 
+
+            } else { 
+
+                System.out.println("Opção inválida! Tente novamente."); 
+
+            } 
+
+        }       
+
+        System.out.println("--- SESSÃO ENCERRADA ---"); 
+
+        System.out.println("Saldo Final: R$ " + saldo); 
+
+                    break;
+
+                case 7:
+                    System.out.println("\n[Executando Exercício 7]");
+                    Scanner scan6 = new Scanner(System.in); 
+ 
+
+        System.out.print("Digite o valor da compra: R$ "); 
+
+        double valorCompra = scan6.nextDouble();  
+
+        System.out.println("Categorias:"); 
+
+        System.out.println("1 - Cliente Comum"); 
+
+        System.out.println("2 - Cliente Premium"); 
+
+        System.out.println("3 - Funcionário"); 
+
+        System.out.print("Escolha a categoria (1, 2 ou 3): "); 
+
+        int categoria = scan6.nextInt(); 
+
+
+        double Desconto = 0; 
+
+        boolean categoriaValida = true;     
+
+        switch (categoria) { 
+
+            case 1: 
+
+                Desconto = 0.05; // 5% 
+
+                break; 
+
+            case 2: 
+
+                Desconto = 0.10; // 10% 
+
+                break; 
+
+            case 3: 
+
+                Desconto = 0.15; // 15% 
+
+                break; 
+
+            default: 
+
+                System.out.println("Erro: Categoria inválida!"); 
+
+                categoriaValida = false; 
+
+                break; 
+
+        } 
+
+
+        if (categoriaValida) { 
+
+            double valorDesconto = valorCompra * Desconto; 
+
+            double valorFinal = valorCompra - Desconto; 
+
+            System.out.println("\n--- RESUMO DO DESCONTO ---"); 
+
+            System.out.printf("Valor do desconto: R$ ", valorDesconto); 
+
+            System.out.printf("Valor final a pagar: R$ %.2f%n", valorFinal); 
+
+        } 
+                    break;
+
+                case 8:
+                    System.out.println("\n[Executando Exercício 18]");
+                    Scanner scan7 = new Scanner(System.in); 
+
+        int positivos = 0; 
+
+        int negativos = 0; 
+
+        int zeros = 0; 
+
+        System.out.println("Digite 10 números inteiros:"); 
+
+
+        for (int i = 1; i <= 10; i++) { 
+
+            System.out.print("Número " + i + ": "); 
+
+            int numex7 = scan7.nextInt(); 
+
+ 
+            if (numex7 > 0) { 
+
+                positivos++;  
+
+            } else if (numex7 < 0) { 
+
+                negativos++;  
+
+            } else { 
+
+                zeros++;  
+
+            } 
+
+        } 
+
+        System.out.println("\n--- RESULTADO DA CONTAGEM ---"); 
+
+        System.out.println("Positivos: " + positivos); 
+
+        System.out.println("Negativos: " + negativos); 
+
+        System.out.println("Zeros: " + zeros); 
+
+                    break;
+
+                case 9:
+                    System.out.println("\n[Executando Exercício 9]");
+                    Scanner scan8 = new Scanner(System.in); 
+
+        System.out.print("Digite um valor para N: "); 
+
+        int n = scan8.nextInt(); 
+
+        int soma = 0;  
+
+        for (int i = 1; i <= n; i++) { 
+
+            soma = soma + i;  
+
+             
+
+        } 
+
+        System.out.println("A soma de 1 até " + n + " é: " + soma); 
+
+                    break;
+
+
+                case 10:
+                    System.out.println("\n[Executando Exercício 10]");
+                    Scanner scan9 = new Scanner(System.in); 
+
+         
+
+        int n1; 
+
+ 
+        do { 
+
+            System.out.print("Digite um número inteiro positivo maior que zero: "); 
+
+            n1 = scan9.nextInt(); 
+
+        } while (n1 <= 0); 
+
+ 
+
+        int somaex10 = 0; 
+
+ 
+
+        System.out.println("Contagem Regressiva:"); 
+
+         
+        for (int i = n1; i >= 1; i--) { 
+
+            System.out.print(i + " ");  
+
+            somaex10 += i;  
+
+        } 
+
+ 
+        System.out.println("\nSoma = " + somaex10); 
+                    break;
+
+                default:
+                    if (opcao != 0) {
+                        System.out.println("Opção inválida! Tente novamente.");
+                    }
+            }
+
+        } while (opcao != 0);
+
+        leitor.close();
+
+    }
+}
