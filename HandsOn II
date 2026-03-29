@@ -1,0 +1,179 @@
+import java.util.Scanner;
+
+public class HandsOnII {
+    
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        int opcao = -1;
+
+        while (opcao != 0) {
+            System.out.println("\n--- MENU DE EXERCÍCIOS - HandsON II ---");
+            System.out.println("1. Exercício 01");
+            System.out.println("2. Exercício 02");
+            System.out.println("3. Exercício 03");
+            System.out.println("4. Exercício 04");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            opcao = leitor.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    executarExercicio01();
+                    break;
+                case 2:
+                    executarExercicio02();
+                    break;
+                case 3:
+                    executarExercicio03();
+                    break;
+                case 4:
+                    executarExercicio04();
+                    break;
+                case 0:
+                    System.out.println("Encerrando o programa");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+        }
+        leitor.close();
+    }
+
+    public static void executarExercicio01() {
+        System.out.println("\n-> Executando Exercício 01");
+          
+         System.out.println(" +\"\"\"\"\"+ ");
+         System.out.println("[| o o |]");
+         System.out.println(" |  ^  | ");
+         System.out.println(" | '-' | ");
+         System.out.println(" +-----+ ");
+    }
+
+    public static void executarExercicio02() {
+        System.out.println("\n-> Executando Exercício 02");
+        
+        Scanner input = new Scanner(System.in);
+
+    
+    double x1 = Math.toRadians(25);
+
+    double y1 = Math.toRadians(35);
+    
+
+    double x2 = Math.toRadians(35.5);
+    
+    double y2 = Math.toRadians(25.5);
+
+    
+    double r = 6371.01;
+
+    double distancia = r * Math.acos(Math.sin(x1) * Math.sin(x2) + 
+                       Math.cos(x1) * Math.cos(x2) * Math.cos(y1 - y2));
+
+    System.out.println("A distância entre esses pontos é: " + distancia + " km");
+    }
+
+    public static void executarExercicio03() {
+        System.out.println("\n-> Executando Exercício 03");
+        
+        Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Digite uma frase ou texto:");
+    String texto = sc.nextLine();
+
+    int letras = 0;
+    int espacos = 0;
+    int numeros = 0;
+    int outros = 0;
+
+    // Converte a string em um array de caracteres e percorre um por um
+    for (char c : texto.toCharArray()) {
+        if (Character.isLetter(c)) {
+            letras++;
+        } else if (Character.isDigit(c)) {
+            numeros++;
+        } else if (Character.isSpaceChar(c)) {
+            espacos++;
+        } else {
+            outros++;
+        }
+    }
+
+    System.out.println("Letras: " + letras);
+    System.out.println("Espaços: " + espacos);
+    System.out.println("Números: " + numeros);
+    System.out.println("Outros: " + outros);
+    }
+
+    public static void executarExercicio04() {
+        System.out.println("\n-> Executando Exercício 04");
+        Scanner sa = new Scanner(System.in);
+
+    char resposta;
+
+    int tentativas = 0;
+
+    boolean acertou = false;
+
+
+
+    do {
+
+        tentativas++;
+
+        System.out.println("\n--- FUNDAMENTOS DE IA ---");
+
+        System.out.println("Na programação tradicional, o programador fornece as REGRAS e os DADOS para obter um RESULTADO.");
+
+        System.out.println("No Aprendizado de Máquina (Machine Learning), o que fornecemos ao computador para que ele gere as REGRAS?");
+
+        System.out.println("a) O Processador e a Memória RAM");
+
+        System.out.println("b) Os Dados e os Resultados esperados");
+
+        System.out.println("c) Apenas o Sistema Operacional");
+
+        System.out.println("d) Um fluxograma detalhado de decisões");
+
+        System.out.println("e) O código-fonte em Java");
+
+        System.out.print("\nSua resposta (tentativa " + tentativas + "/3): ");
+
+        
+
+        resposta = sa.next().toLowerCase().charAt(0);
+
+
+
+        switch (resposta) {
+
+            case 'b':
+
+                System.out.println("Resposta correta!");
+                acertou = true;
+
+                break;
+
+            default:
+
+                if (tentativas < 3) {
+
+                    System.out.println("Resposta incorreta. Tente novamente!");
+
+                } else {
+
+                    System.out.println("Resposta incorreta nas 3 tentativas. A resposta correta era a (b).");
+
+                }
+
+                break;
+
+        }
+
+
+
+    } while (!acertou && tentativas < 3);
+
+}
+    }
